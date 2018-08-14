@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <style>
+      body{background: skyblue; font-family: verdana; color: #fff; padding: 30px}
+      h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+      p, ul{font-size: 15px; text-align: center;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome Abord! <%= person %></h1>
+    <p><strong>Age: </strong><%= data.age %></p>
+    <p><strong>Job: </strong><%= data.job %></p>
+    <ul>
+      <% data.hobbies.forEach(function(hobby){ %>
+        <li> <%= hobby %> </li>
+      <% }); %>
+      <li>  </li>
+    </ul>
+  </body>
+</html>

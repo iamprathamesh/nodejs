@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title> Musicster </title>
+    <% include partials/scripts.ejs %>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--<script src="/assets/ajax.js"></script>-->
+    <link href="/assets/search.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/searchlist.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <div>
+      <% include partials/search.ejs %>
+    </div>
+    <div>
+      <ul id="myUL">
+        <%for (var i=0; i<song.length; i++) { %>
+          <li>
+            <div>
+              <a id="songname" href="/search/song/<%=song[i].songId%>"><%= song[i].songName %><img id="songimage" src="<%=song[i].songImage%>" width="70px" height="70px"></a>
+            </div>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+
+</html>

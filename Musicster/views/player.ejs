@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title> Musicster </title>
+    <% include partials/scripts.ejs %>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--<script src="/assets/ajax.js"></script>-->
+    <link href="/assets/search.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <div>
+      <% include partials/search.ejs %>
+    </div>
+    <div>
+      <img src="<%= song.songImage %>" width="300px" height="300px">
+    </div>
+    <br>
+    <div id="audioplayer">
+      <audio controls>
+        <source src="<%= song.songUrl %>" type="audio/mpeg">
+      </audio>
+    </div>
+  </body>
+
+</html>

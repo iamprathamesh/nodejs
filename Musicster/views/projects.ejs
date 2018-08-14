@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title> Musicster </title>
+    <% include partials/scripts.ejs %>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--<script src="/assets/ajax.js"></script>-->
+    <link href="/assets/search.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/searchlist.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <div>
+      <% include partials/search.ejs %>
+    </div>
+    <div>
+      <ul id="myUL">
+          <li>
+            <div>
+              <a id="xcopy" href="http://xcopy.atwebpages.com/"><strong>Xcopy: <strong> A simple cross-platform text copy and paste application </a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </body>
+
+</html>
